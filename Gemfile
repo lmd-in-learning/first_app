@@ -24,8 +24,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+# gem 'sdoc', '~> 0.4.0', group: :doc
+group :doc do
+	gem 'sdoc', '0.3.20', require:false
+end
 
+group :production do
+	gem 'pg', '0.15.1'
+	end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
